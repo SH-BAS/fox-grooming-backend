@@ -1,0 +1,1975 @@
+{
+    "info": {
+        "name": "FoxGrooming API new",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Authentication",
+            "item": [
+                {
+                    "name": "api\/register",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/register",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "register"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|string|max:255"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/login",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "login"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "type": "text",
+                                    "value": "test@example.com",
+                                    "description": "required|string|email"
+                                },
+                                {
+                                    "key": "password",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|string"
+                                },
+                                {
+                                    "key": "fcm_token",
+                                    "type": "text",
+                                    "value": "your_fcm_device_token",
+                                    "description": "nullable|string - Firebase Cloud Messaging token"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/verify-token",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/verify-token",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "verify-token"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "type": "text",
+                                    "value": "test@example.com",
+                                    "description": "required|email"
+                                },
+                                {
+                                    "key": "token",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/resend-verification",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/resend-verification",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "resend-verification"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "type": "text",
+                                    "value": "test@example.com",
+                                    "description": "required|email"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/forgot-password",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/forgot-password",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "forgot-password"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "type": "text",
+                                    "value": "test@example.com",
+                                    "description": "required|email"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/reset-password",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/reset-password",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reset-password"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "type": "text",
+                                    "value": "test@example.com",
+                                    "description": "required|email"
+                                },
+                                {
+                                    "key": "token",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|string"
+                                },
+                                {
+                                    "key": "password",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|string|min:8|confirmed"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "item": [
+                {
+                    "name": "api\/all-categories",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/all-categories",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "all-categories"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/category-detail\/{id}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/category-detail\/{id}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "category-detail",
+                                "{id}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/breed-list\/{categoryId}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/breed-list\/{categoryId}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "breed-list",
+                                "{categoryId}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "categoryId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Size",
+            "item": [
+                {
+                    "name": "api\/all-sizes",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/all-sizes",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "all-sizes"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Service",
+            "item": [
+                {
+                    "name": "api\/all-services",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/all-services",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "all-services"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/category-wise-services\/{categoryId}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/category-wise-services\/{categoryId}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "category-wise-services",
+                                "{categoryId}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "categoryId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/service-detail\/{serviceId}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/service-detail\/{serviceId}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "service-detail",
+                                "{serviceId}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "serviceId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Gallery",
+            "item": [
+                {
+                    "name": "api\/gallery",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/gallery",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "gallery"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/category-wise-gallery\/{categoryId}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/category-wise-gallery\/{categoryId}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "category-wise-gallery",
+                                "{categoryId}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "categoryId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Banner",
+            "item": [
+                {
+                    "name": "api\/all-banners",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/all-banners",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "all-banners"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/category-wise-banners\/{categoryId}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/category-wise-banners\/{categoryId}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "category-wise-banners",
+                                "{categoryId}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "categoryId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "CmsPage",
+            "item": [
+                {
+                    "name": "api\/cms-pages",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/cms-pages",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "cms-pages"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "BasePrice",
+            "item": [
+                {
+                    "name": "api\/base-price\/{petId}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/base-price\/{petId}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "base-price",
+                                "{petId}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "petId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/time-availability",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/time-availability?date=2026-03-28&franchise_id=test_value&total_duration=1&staff_id=test_value&timezone=test_value",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "time-availability"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Franchise",
+            "item": [
+                {
+                    "name": "api\/franchise",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/franchise",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "franchise"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/franchise",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/franchise",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "franchise"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/franchise\/{franchise}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/franchise\/{franchise}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "franchise",
+                                "{franchise}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "franchise",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/franchise\/{franchise}",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/franchise\/{franchise}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "franchise",
+                                "{franchise}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "franchise",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/franchise\/{franchise}",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/franchise\/{franchise}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "franchise",
+                                "{franchise}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "franchise",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Notifications",
+            "item": [
+                {
+                    "name": "api\/notifications",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/notifications?per_page=15&page=1",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "notifications"
+                            ],
+                            "query": [
+                                {
+                                    "key": "per_page",
+                                    "value": "15"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": "Paginated user notifications. Flat data array (not nested)."
+                    }
+                },
+                {
+                    "name": "api\/notifications\/{id}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/notifications\/1",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "notifications",
+                                "1"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": "Notification detail. Marks the notification as read."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Profile",
+            "item": [
+                {
+                    "name": "api\/profile",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/profile",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "profile"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/profile",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/profile",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "profile"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "sometimes|string|max:255"
+                                },
+                                {
+                                    "key": "phone",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "sometimes|string|max:20"
+                                },
+                                {
+                                    "key": "image",
+                                    "type": "file",
+                                    "src": [],
+                                    "description": "sometimes|image|mimes:jpg,jpeg,png,webp|max:2048"
+                                },
+                                {
+                                    "key": "password",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "sometimes|string|min:8|confirmed"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/logout",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/logout",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "logout"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/profile",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/profile",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "profile"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Pet",
+            "item": [
+                {
+                    "name": "api\/pets",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/pets",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pets"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/pets",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/pets",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pets"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "category_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:categories,id"
+                                },
+                                {
+                                    "key": "category_type_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:category_types,id"
+                                },
+                                {
+                                    "key": "size_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:sizes,id"
+                                },
+                                {
+                                    "key": "name",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|string|max:255"
+                                },
+                                {
+                                    "key": "age",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                },
+                                {
+                                    "key": "weight",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                },
+                                {
+                                    "key": "gender",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|in:male,female"
+                                },
+                                {
+                                    "key": "is_vaccinated",
+                                    "type": "text",
+                                    "value": "1",
+                                    "description": "nullable|boolean"
+                                },
+                                {
+                                    "key": "notes",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                },
+                                {
+                                    "key": "profile_image",
+                                    "type": "file",
+                                    "src": [],
+                                    "description": "nullable|image|mimes:jpg,jpeg,png,webp,jfif|max:2048"
+                                },
+                                {
+                                    "key": "images.*",
+                                    "type": "file",
+                                    "src": [],
+                                    "description": "nullable|image|mimes:jpg,jpeg,png,webp,jfif|max:2048"
+                                },
+                                {
+                                    "key": "documents.*",
+                                    "type": "file",
+                                    "src": [],
+                                    "description": "nullable|file|mimes:pdf,doc,docx|max:2048"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/pets\/{pet}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/pets\/{pet}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pets",
+                                "{pet}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "pet",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/pets\/{pet}",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/pets\/{pet}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pets",
+                                "{pet}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "pet",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "category_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:categories,id"
+                                },
+                                {
+                                    "key": "category_type_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:category_types,id"
+                                },
+                                {
+                                    "key": "size_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:sizes,id"
+                                },
+                                {
+                                    "key": "name",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "sometimes|string|max:255"
+                                },
+                                {
+                                    "key": "age",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                },
+                                {
+                                    "key": "weight",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                },
+                                {
+                                    "key": "gender",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|in:male,female"
+                                },
+                                {
+                                    "key": "is_vaccinated",
+                                    "type": "text",
+                                    "value": "1",
+                                    "description": "nullable|boolean"
+                                },
+                                {
+                                    "key": "notes",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                },
+                                {
+                                    "key": "profile_image",
+                                    "type": "file",
+                                    "src": [],
+                                    "description": "nullable|image|mimes:jpg,jpeg,png,webp,jfif|max:2048"
+                                },
+                                {
+                                    "key": "images.*",
+                                    "type": "file",
+                                    "src": [],
+                                    "description": "nullable|image|mimes:jpg,jpeg,png|max:2048"
+                                },
+                                {
+                                    "key": "documents.*",
+                                    "type": "file",
+                                    "src": [],
+                                    "description": "nullable|file|mimes:pdf,doc,docx|max:2048"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/pets\/{pet}",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/pets\/{pet}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pets",
+                                "{pet}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "pet",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/pet-images\/{petImage}",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/pet-images\/{petImage}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pet-images",
+                                "{petImage}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "petImage",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/pet-documents\/{petDocument}",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/pet-documents\/{petDocument}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "pet-documents",
+                                "{petDocument}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "petDocument",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Booking",
+            "item": [
+                {
+                    "name": "api\/bookings",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/bookings",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "bookings"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/bookings",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/bookings",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "bookings"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "pet_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:pets,id"
+                                },
+                                {
+                                    "key": "franchise_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:franchises,id"
+                                },
+                                {
+                                    "key": "staff_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|exists:staff,id"
+                                },
+                                {
+                                    "key": "booking_date",
+                                    "type": "text",
+                                    "value": "2026-03-28",
+                                    "description": "required|date|after_or_equal:today"
+                                },
+                                {
+                                    "key": "start_time",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required"
+                                },
+                                {
+                                    "key": "end_time",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required"
+                                },
+                                {
+                                    "key": "total_duration",
+                                    "type": "text",
+                                    "value": "1",
+                                    "description": "nullable|integer"
+                                },
+                                {
+                                    "key": "user_notes",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                },
+                                {
+                                    "key": "document",
+                                    "type": "file",
+                                    "src": [],
+                                    "description": "nullable|file|mimes:jpg,jpeg,png,pdf,doc,docx|max:2048"
+                                },
+                                {
+                                    "key": "services",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|array"
+                                },
+                                {
+                                    "key": "services.*.service_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:services,id"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/bookings\/{booking}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/bookings\/{booking}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "bookings",
+                                "{booking}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "booking",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/bookings\/{booking}",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/bookings\/{booking}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "bookings",
+                                "{booking}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "booking",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "booking_date",
+                                    "type": "text",
+                                    "value": "2026-03-28",
+                                    "description": "sometimes|date|after_or_equal:today"
+                                },
+                                {
+                                    "key": "booking_time",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "sometimes"
+                                },
+                                {
+                                    "key": "user_notes",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                },
+                                {
+                                    "key": "services",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|array"
+                                },
+                                {
+                                    "key": "services.*.service_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:services,id"
+                                },
+                                {
+                                    "key": "services.*.quantity",
+                                    "type": "text",
+                                    "value": "1",
+                                    "description": "nullable|integer|min:1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/bookings\/{booking}",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/bookings\/{booking}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "bookings",
+                                "{booking}"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "booking",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/order-history",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/order-history",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "order-history"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Review",
+            "item": [
+                {
+                    "name": "api\/reviews",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/reviews",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reviews"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "booking_id",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|exists:bookings,id"
+                                },
+                                {
+                                    "key": "rating",
+                                    "type": "text",
+                                    "value": "1",
+                                    "description": "required|integer|min:1|max:5"
+                                },
+                                {
+                                    "key": "comment",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/bookings\/{booking}\/review",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/bookings\/{booking}\/review",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "bookings",
+                                "{booking}",
+                                "review"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "booking",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Chat",
+            "item": [
+                {
+                    "name": "api\/bookings\/{booking}\/chats",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/bookings\/{booking}\/chats",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "bookings",
+                                "{booking}",
+                                "chats"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "booking",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "api\/bookings\/{booking}\/chats",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}\/api\/bookings\/{booking}\/chats",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "bookings",
+                                "{booking}",
+                                "chats"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "booking",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "message",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "required|string"
+                                },
+                                {
+                                    "key": "type",
+                                    "type": "text",
+                                    "value": "test_value",
+                                    "description": "nullable|string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http:\/\/127.0.0.1:8000",
+            "type": "string"
+        },
+        {
+            "key": "token",
+            "value": "YOUR_TOKEN_HERE",
+            "type": "string"
+        }
+    ]
+}

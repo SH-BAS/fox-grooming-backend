@@ -1,0 +1,86 @@
+/**
+ * Shared readable content typography for Fox Grooming web pages.
+ */
+.content-readable {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1f2937;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.content-readable h1,
+.content-readable h2,
+.content-readable h3,
+.content-readable h4,
+.content-readable h5,
+.content-readable h6 {
+    font-family: inherit;
+    color: #0f172a;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+}
+
+.content-readable h2 {
+    font-size: 1.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-readable h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+}
+
+.content-readable h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.content-readable p,
+.content-readable li {
+    color: #1f2937;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.85;
+    letter-spacing: 0.015em;
+    margin-bottom: 1.35rem;
+}
+
+.content-readable p:last-child {
+    margin-bottom: 0;
+}
+
+.content-readable .section-title p,
+.content-readable .franchise-card p {
+    color: #374151;
+}
+
+.content-readable .step-box p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #1f2937;
+}
+
+.content-readable label {
+    color: #0f172a;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+}
+
+.content-readable .text-muted {
+    color: #6b7280 !important;
+}
+
+@media (max-width: 768px) {
+    .content-readable p,
+    .content-readable li {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .content-readable h2 {
+        font-size: 1.5rem;
+    }
+}
